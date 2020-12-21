@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title> An Image to Describe </title>
+	<script src="https://d3js.org/d3.v6.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="site.css">
+</head>
+<body>
+		<form class="user-input" id="userInput">
+			<input type="text" name="tickersymbol">
+			<input type="submit" name="getTradeValue" value="Submit">
+		</form>
+
+		<svg class="svg-window"></svg>
+		<div class="symbol-info tickr-trade-info">
+			<p><span class="metadata">Open</span><span id="openTradeValue" class="trade-value"><br/></span></p>
+			<p><span class="metadata">Low</span><span id="lowTradeValue" class="trade-value"><br/></span></p>
+			<p><span class="metadata">High</span><span id="highTradeValue" class="trade-value"><br/></span></p>
+			<p><span class="metadata">Close</span><span id="closeTradeValue" class="trade-value"><br/></span></p>
+			<p><span class="metadata">Volume</span><span id="volumeTradeValue" class="trade-value"><br/></span></p>
+		</div>
+		<div class="symbol-info otherinformation">
+			<p><span class="metadata">Symbol</span><span id="symbolValue" class="trade-value"><br/></span></p>
+			<p><span class="metadata">Refreshed</span><span id="lastRefreshedValue" class="trade-value"><br/></span></p>
+			<p><span class="metadata">Interval</span><span id="intervalValue" class="trade-value"><br/></span></p>
+			<p><span class="metadata">Time Zone</span><span id="timezoneValue" class="trade-value"><br/></span></p>
+		</div>
+	<script src="stock-tracker.js"></script>
+</body>
+</html>

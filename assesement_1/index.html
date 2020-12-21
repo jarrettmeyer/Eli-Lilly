@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title> An Image to Describe </title>
+	<script src="https://d3js.org/d3.v5.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="site.css">
+</head>
+<body>
+	<div class="markerTooltip" id="tooltip"></div>
+	<div class="master">
+		<div class="heading">Image Annotator</div>
+		<div class="left" id="leftPanel">
+			<div id="imageContainer" class="img-container">
+				<svg id="imageOverlay" class="img-overlay"></svg>
+			</div>
+			<div id="dialogue">
+				<input type="text" name="description" id = "descriptiontext" maxlength="63">
+				<button class = "buttons" id = "save">Save</button>
+				<button class = "buttons" id = "cancel">Cancel</button>
+			</div>
+		</div>
+		<div class="right">
+			<div class="img-uploader-container">
+				<label class="img-uploader">
+					<input type="file" id="imageUploader" name="Upload an image" accept="image/*" autocomplete="off"/>
+					Upload an image
+				</label>
+			</div>
+			<div id="fileInfoContainer" class="img-info-container">
+				<h3>Image Details</h3>
+				<p><span>Image Name: </span><span id="filename" class="img-details"></span></p>
+				<p><span>MIME Type: </span><span id="filetype" class="img-details"></span></p>
+				<p><span>Dimensions: </span><span id="dimensions" class="img-details"></span></p>
+			</div>
+			<div id="descriptionTableContainer">
+				<h3>Marker Details</h3>
+				<p><span>  </span></p>
+				<table id="descriptionTable">
+					<thead>
+						<tr><th width="20%">X Pos</th>
+							<th width="20%">Y Pos</th>
+							<th>Description</th></tr>
+					</thead>
+				</table>
+			</div>
+		</div>
+	</div>
+	<script src="image-mapper.js"></script>
+</body>
+</html>
