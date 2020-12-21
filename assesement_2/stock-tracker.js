@@ -1,8 +1,8 @@
 const stockDataUrl = "https://www.alphavantage.co/query?function=TIME_SERIES_INTRADAY&interval=1min&apikey=LZ1DB89RRLZ57PUU&outputsize=full";
-/*const stockDataUrl = "file:///Users/anverma/Projects/garage/assesement_2/data.json";*/
+
 const svg = d3.select("svg");
-const svgWidth = window.innerWidth*0.9;
-const svgHeight = window.innerHeight*0.9;
+const svgWidth = window.innerWidth*0.75;
+const svgHeight = window.innerHeight*0.45;
 
 if (svgHeight <500) {
 	const innerHeight = 450;
@@ -51,8 +51,8 @@ fetch(stockDataUrl+"&symbol="+tickerSymbol)
 
 	let timeSeries = data["Time Series (1min)"];
 	
-	var startDateTime = new Date(2020, 11, 18, 9, 30);
-	var endDateTime = new Date(2020, 11, 18, 16);
+	var endDateTime = new Date();
+	var startDateTime = endDateTime.getDate()-1;
 
 	let allTimestamps = Object.keys(timeSeries);
 
