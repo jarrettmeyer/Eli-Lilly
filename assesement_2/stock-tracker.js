@@ -1,19 +1,22 @@
 const stockDataUrl = "https://www.alphavantage.co/query?function=TIME_SERIES_INTRADAY&interval=1min&apikey=LZ1DB89RRLZ57PUU&outputsize=full";
 
 const svg = d3.select("svg");
-const svgWidth = window.innerWidth*0.75;
-const svgHeight = window.innerHeight*0.45;
+const svgWidth = parseFloat(svg.style('width'));
+const svgHeight = parseFloat(svg.style("height"));
+
+var innerHeight;
+var innerWidth;
 
 if (svgHeight <500) {
-	const innerHeight = 450;
+	innerHeight = 450;
 } else {
-	const innerHeight = svgHeight - 50;
+	innerHeight = svgHeight - 50;
 }
 
 if (svgWidth < 500) {
-	const innerWidth = 450;
+	innerWidth = 450;
 } else {
-	const innerWidth = svgWidth - 100;
+	innerWidth = svgWidth - 100;
 }
 
 document.getElementById('userInput').addEventListener('submit', function(event) {
