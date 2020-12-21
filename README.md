@@ -15,7 +15,6 @@ Marker description has been left empty in case user only wants to add marks.
 
 Known Issues:
 Not responsive.
-Uses d3.js library.
 
 ASSESSMENT 2: 
 An application trade values of a ticker symbol.
